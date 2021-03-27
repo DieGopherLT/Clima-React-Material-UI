@@ -24,7 +24,7 @@ function App() {
         if (necesitaConsultar) {
             const consultaApi = () => {
                 const appid: string = '005e28441f3504e6bafc15223523c675';
-                const url: string = `http://api.openweathermap.org/data/2.5/weather?q=${datos.ciudad},${datos.pais}&appid=${appid}`;
+                const url: string = `https://api.openweathermap.org/data/2.5/weather?q=${datos.ciudad},${datos.pais}&appid=${appid}`;
 
                 fetch(url)
                     .then(respuesta => respuesta.json())
@@ -46,14 +46,14 @@ function App() {
             <Header titulo='Clima React App'/>
             <Container maxWidth="lg">
                 <Grid container spacing={4}>
-                    <Grid item md={6}>
+                    <Grid item xs={12} md={6}>
                         <Formulario
                             datos={datos}
                             setDatos={setDatos}
                             setNecesitaConsultar={setNecesitaConsultar}
                         />
                     </Grid>
-                    <Grid item md={6}>
+                    <Grid item xs={12} md={6}>
                         {error ? <Error mensaje='No hubo resultados' /> : <ReporteClima datosClima={datosClima}/>}
                     </Grid>
                 </Grid>
