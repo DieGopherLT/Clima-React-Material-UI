@@ -53,6 +53,14 @@ const Formulario: React.FunctionComponent<FormularioProps> = ({datos, setDatos, 
                 <option value="MX">México</option>
                 <option value="US">EEUU</option>
                 <option value="CA">Canáda</option>
+                <option value="CO">Colombia</option>
+                <option value="AR">Argentina</option>
+                <option value="ES">España</option>
+                <option value="SV">El Salvador</option>
+                <option value="PE">Perú</option>
+                <option value="VE">Venezuela</option>
+                <option value="BO">Bolivia</option>
+                <option value="CL">Chile</option>
             </TextField>
             <Button
                 variant={"contained"}
